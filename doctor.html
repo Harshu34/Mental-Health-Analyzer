@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Consultation</title>
+    <style>
+    .root .therapists {
+    position: relative;
+    top: -100px;
+    background: #e7ecf0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+    .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+div {
+    display: block;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    /* background-color: #fff; */
+    background-image: url(../back.jfif);
+            /* width:100%; */
+            background-repeat: no-repeat;
+            background-size: cover;
+             background-position: center;
+             /* margin: 0;
+             padding:0; */
+}
+*{
+    box-sizing:border-box;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.root .closest-therapists .col-md-4 .ad-listing, .root .closest-therapists .col-md-4 .recommended-therapist-card, .root .closest-therapists .col-sm-6 .ad-listing, .root .closest-therapists .col-sm-6 .recommended-therapist-card {
+    box-shadow: 2px 3px 22px -1px rgb(0 0 0 / 22%);
+}
+.media:first-child {
+    margin-top: 0;
+}
+.recommended-therapist-card {
+    position: relative;
+    background: #fff;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+.media, .media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+.media {
+    margin-top: 15px;
+}
+.recommended-therapist-card .inner {
+    height: 543px;
+    width:260px;
+    text-align: center;
+}
+.recommended-therapist-card .background, .mhp .background {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    background: #e7ecf0;
+    background: radial-gradient(at center, #666, #e7ecf0);
+}
+.recommended-therapist-card .background .img, .mhp .background .img {
+    width: 100;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.recommended-therapist-card h3.media-heading {
+    margin-bottom: 0;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 0;
+}
+h3{
+    color:#172c55;
+    line-height:1.1;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: block;
+}
+.recommended-therapist-card h5.media-subheading {
+    margin: 5px 0 0 0;
+    color: #909ba0;
+}
+h5{
+    font-size:14px;
+    font-weight:500;
+    line-height:1.1;
+    font-family:inherit;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: block;
+}
+.recommended-therapist-card .btn-primary {
+    border-radius: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    background: #162c56;
+    color: #fff;
+    font-size: 1.1em;
+}
+.btn {
+    display: inline-block;
+
+    margin-bottom: 0;
+    
+
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button{
+    overflow:visible;
+    margin:0;
+    font:inherit;
+}
+.flex-container{
+    display:flex;
+    justify-content:space-evenly
+}
+
+    </style>
+</head>
+<body>
+    <h1 style="color:#162c56; font-size:50px; font-weight:700; text-align: center; font-family: Arial, Helvetica, sans-serif;">CONTACT &nbsp;PHYSICOLOGIST</h1>
+    <div class="flex-container">
+    <div class="root">
+        
+            <div class="container">
+                <div class="row closest-therapists">
+                    <div class="col-ms-10 col-md-offset-1">
+                        <div class="media recommended-therapist-card clearfix" id="174079">
+                            <a href="/listing/174079-Paul-Dearman" target="_blank"></a>
+                            <div class="inner">
+                                <div class="background">
+                                    <div class="img" style="background-image: url('Dr.Sahiba.png ')">
+                                    </div>
+                                    <h3 class="media-heading">Dr. Sabiha Sultana M</h3>
+                                    <h5 class="media-subheading">28 YRS EXP.</h5>
+                                    <ul>
+                                        <li><strong>She can help you with</strong></li>
+                                        <li> Depression</li>
+                                        <li>Anger</li>
+                                        <li>Internet Addiction</li>
+                            
+
+                                    </ul>
+                                    <footer>
+                                        <button class="btn btn-primary" onclick="window.location.href = 'https://www.apollo247.com/doctors/dr-sabiha-sultana-m-29cf7049-929a-499c-9f18-fd6356da34c3';">View Profile</button>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    <div class="root">
+        
+        <div class="container">
+            <div class="row closest-therapists">
+                <div class="col-ms-10 col-md-offset-1">
+                    <div class="media recommended-therapist-card clearfix" id="174079">
+                        <a href="/listing/174079-Paul-Dearman" target="_blank"></a>
+                        <div class="inner">
+                            <div class="background">
+                                <div class="img" style="background-image :url('Ms.Neha.png')">
+                                </div>
+                                <h3 class="media-heading">Ms. Neha Dubey</h3>
+                                <h5 class="media-subheading">9 YRS EXP.</h5>
+                                <ul>
+                                    <li><strong>She can help you with</strong></li>
+                                    <li>Depression</li>
+                                    <li>Anger</li>
+                                    <li>Stress</li>
+
+                                </ul>
+                                <footer>
+                                    <button class="btn btn-primary" onclick="window.location.href = 'https://www.apollo247.com/doctors/ms-neha-dubey-64628eb4-aa63-4470-a7f5-679292d85cc2';">View Profile</button>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+<div class="root">
+        
+    <div class="container">
+        <div class="row closest-therapists">
+            <div class="col-ms-10 col-md-offset-1">
+                <div class="media recommended-therapist-card clearfix" id="174079">
+                    <a href="/listing/174079-Paul-Dearman" target="_blank"></a>
+                    <div class="inner">
+                        <div class="background">
+                            <div class="img" style="background-image :url('Dr.Eric.jpeg')">
+                            </div>
+                            <h3 class="media-heading">Dr. Eric Miller</h3>
+                            <h5 class="media-subheading">3 YRS EXP.</h5>
+                            <ul>
+                                <li><strong>He can help you with</strong></li>
+                                <li>Mental Issues</li>
+                                <li>Anger</li>
+                                <li>Depression</li>
+
+                            </ul>
+                            <footer>
+                                <button class="btn btn-primary" onclick="window.location.href = 'https://www.apollo247.com/doctors/dr-eric-miller-28c4f565-4488-4c2c-aff9-f6f26ef16990';">View Profile</button>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

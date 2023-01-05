@@ -1,0 +1,207 @@
+/* ..fonts.. */
+@font-face {
+    font-family:"Raleway-regular";
+    src:url(../fonts/Raleway-Regular.ttf)
+}
+@font-face {
+    font-family:"Raleway-medium";
+    src:url(../fonts/Raleway-Medium.ttf)
+}
+@font-face {
+    font-family:"Raleway-bold";
+    src:url(../fonts/Raleway-Bold.ttf)
+}
+@font-face {
+    font-family:"Raleway-extrabold";
+    src:url(../fonts/Raleway-ExtraBold.ttf)
+}
+@font-face {
+    font-family:"Raleway-semibold";
+    src:url(../fonts/Raleway-SemiBold.ttf)
+}
+@font-face {
+    font-family:"Raleway-black";
+    src:url(../fonts/Raleway-Black.ttf)
+}
+#heading{
+    color: #06b5d4;
+    font-size: 105px;
+    font-weight: 800;
+    padding-bottom: 650px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img.background{
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:-1;
+    width:100%;
+    height:100%;
+     opacity: 0.9;  /* mark for opacity: 0; */
+    filter: blur(6px);
+    -webkit-filter: blur(6px); 
+    transition: 1s;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+:root {
+    --primary:#fac906;
+    --primary2:rgb(214, 214, 205);
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+#leg{
+    height: 375px;
+    width: 500px;
+    font-family:"Raleway-medium";
+    overflow: hidden;
+}
+
+#leg::before{
+    content: "";
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    height:375px;
+    width: 500px;
+    background: linear-gradient(0deg,transparent,#45f3ff ,#45f3ff);
+    transform-origin:bottom right;
+    animation:animate 6s linear infinite;
+}
+#leg::after{
+    content: "";
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    height:375px;
+    width: 500px;
+    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+    transform-origin:bottom right;
+    animation:animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.form{
+    position: absolute;
+    left:50%;
+    top:-37%;
+    transition: 4s;
+    transform:translate(-50%,-50%);
+} 
+.showform{
+      top:37%;
+}
+.fm{
+    position:absolute;
+    inset: 2px;
+    border-radius: 10px;
+    background: #3e3f41;
+    z-index: 10;
+}
+#ft{
+    margin:2px 4px;
+}
+td{
+    padding: 8px;
+}
+.st{
+    font-family:"Raleway-bold";
+    font-size: 20px;
+
+}
+.tab{
+    width: 400px;
+    height: 400px;
+    display: block;
+    align-items: center; 
+    justify-content: center;
+     padding:25px; 
+     margin: 100px auto; 
+     /* border: 1px solid black;  */
+     border-radius: 10px; 
+     box-shadow: 5px 10px 20px black;
+}
+.tdLabel{
+    font-size: 17px;
+    font-weight: 500;
+    color:#d6d6d6
+}
+#center{
+    margin:23px 150px;
+}
+#ce{
+    margin: 3px;
+    padding: 10px;
+}
+.btn{
+    padding: 5.75px 11.75px;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    line-height:0.8;
+    font-size:1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    border:1px solid transparent;
+}
+
+.btn-primary {
+    background:#10c9d6;
+    color:var(--heaven);
+}
+.btn-primary:hover{
+    background:var(--heaven);
+    color:#10c9d6; 
+    border:2px solid black;
+}
+.btn-secondary{
+    background:var(--secondary);
+    color:var(--heaven); 
+}
+.btn-secondary:hover{
+    background:var(--heaven);
+    color:#23242a; 
+    border:2px solid black;
+}
+#msg{
+    position: absolute;
+    color:#45f3ff;
+    margin-top: 0px;
+    font-weight: 700;
+    font-family: "Raleway-extrabold";
+    font-size: 20px;
+    margin-left:40px;
+    display:block;
+}
+#lb{
+    color:#e9e8e8;
+    margin:8px;
+}

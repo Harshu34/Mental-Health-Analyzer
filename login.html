@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Analyzer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onclick="showModal()" >
+    <audio src="16fc8f3d-1fb9-4a96-9947-5e62a7840b9a.mp3" id="myAudio"></audio>
+    <audio onclick="showMd()">
+        <source src="https://freetts.com/audio/7b53c427-7cf1-488f-910b-2c714ffaabe5.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio class="ad" onclick="playMusic()">
+    <source src="https://freetts.com/audio/16fc8f3d-1fb9-4a96-9947-5e62a7840b9a.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1 id="heading">MENTAL &nbsp; HEALTH &nbsp;  ANALYZER</h1> 
+    <img class="background" src= "../bg.jpg">
+    <div id="leg" class="tab form">
+        <div class="fm">
+    <form id="ft" name='submit-to-google-sheet'>  
+        <table >  
+            <tr class="pad">  
+            <td class="tdLabel"><label for="register_name" class="label" >Name:</label></td>  
+            <td><input type="text" name="Name" onclick="showMd1()" value="" id="register_name" style="width:160px" placeholder="Enter your name" required/></td>  
+        </tr> 
+        <tr></tr> 
+        <tr class="pad">
+            <td class ="tdLabel"><label for="register_DOB" class="label">Date of Birth:</label></td>
+            <td><input type="date" name="DOB" value="" onclick="showMd2()" id="DOB" style="width:160 px" placeholder="Enter DOB" required/></td>
+        </tr>
+        <tr></tr>
+        <tr class="pad">  
+            <td class="tdLabel"><label for="register_age" class="label">Age:</label></td>  
+            <td><input type="text" name="Age" onclick=" showMd3()" id="register_age" style="width:160px" placeholder="Enter your age" required/></td>  
+        </tr>  
+        <tr class="pad">  
+            <td class="tdLabel"><label for="register_email" class="label">Enter Email:</label></td>  
+            <td  
+        ><input type="email" name="Email" value="" id="register_email" onclick="showMd4()" style="width:160px" placeholder="Enter your email" required/></td>  
+        </tr>  
+        <tr class="pad">  
+            <td class="tdLabel"><label for="register_gender" class="label" >Enter Gender:</label></td>  
+            <td>  
+        <input type="radio" name="Gender" id="register_gendermale" value="male" required/>  
+        <label id="lb" for="register_gendermale">Male</label>  
+        <input type="radio" name="Gender" id="register_genderfemale" value="female" required/>  
+        <label id="lb" for="register_genderfemale">Female</label>  
+        <input type="radio" name="Gender" id="register_other" value="other" required/>  
+        <label id="lb" for="register_genderfemale">Other</label> 
+            </td>  
+        </tr>  
+        <tr class="pad">
+            <td>
+                <label for="register_previous" class="tdLabel" required>Faced Mental Issue Earlier </label>
+                <td><input type="radio" name="Any Earlier Issue" id="register_previous" value="Yes" required>
+                <label id="lb" for="register_previous">Yes</label>
+                <input type="radio" name="Any Earlier Issue" id="register_previous" value="No" required>
+                <label id="lb" for="register_previous">No</label>
+            </td>
+        </tr>
+        </table>
+        <div id="center">
+            <button type="submit" value="sound" onclick="submitfn()" onclick="playMusic()" id="ce" class="btn btn-primary">Submit</button>
+
+            
+            <button  type="reset" id="ce" class="btn btn-secondary">Reset</button>
+        </div>  
+        </form> 
+        <span id="msg"></span>
+    </div> 
+     <!-- </div>  -->
+    </div>
+    
+
+
+
+    <script>
+        var form2=document.getElementById('ft');
+        form2.addEventListener('submit', e => {
+            e.preventDefault()
+        setTimeout(
+            function submitfn(){
+            document.location.href="options.html";
+        }
+        ,6000)
+})
+    </script>
+
+
+    <!-- .................database....................................... -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx0BvfQ9a-XfF-ugS9tu7GlFycko1WNO_vEa-BoTFggqE7px6ctH79-Fhtki7g2eEvVBQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg");
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="You have Successfully entered your details!!"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script>
+          function showModal(){
+            document.querySelector('.form').classList.add('showform');
+            }
+            
+          function showMd1(){
+            var music1 = new Audio('https://freetts.com/audio/e06d00eb-4f79-4dda-b2a2-34235e6d44dc.mp3');
+          music1.play();
+          }
+
+          function showMd2(){
+            var music1 = new Audio('https://freetts.com/audio/f0bfb2e9-49e7-4e87-a264-b1d622a10573.mp3');
+          music1.play();
+          }
+
+          function showMd3(){
+            var music1 = new Audio('https://freetts.com/audio/5d80ccc7-f317-45a4-8b6c-446be5055592.mp3');
+          music1.play();
+          }
+
+          function showMd4(){
+            var music1 = new Audio('https://freetts.com/audio/d38d09d2-89bf-4f1b-a94e-a158700782c7.mp3');
+          music1.play();
+          }
+
+          function playMusic(){
+            document.getElementById("myAudio").play();
+            // var music = new Audio('16fc8f3d-1fb9-4a96-9947-5e62a7840b9a.mp3');
+          music.play();
+          }
+      </script>
+</body>
+</html>
